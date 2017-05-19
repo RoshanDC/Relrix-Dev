@@ -1,2 +1,0 @@
-# Relrix-Dev
-Abiral Development
