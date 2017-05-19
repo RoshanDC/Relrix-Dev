@@ -1,0 +1,110 @@
+<form (submit)="addVendor($event)" ngNativeValidate>
+  <div class="card-body">
+    <div *ngIf="message" class="row">
+      <h1 class="alert alert-success">hello</h1>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputFirstName">First Name</label>
+          <input class="form-control" id="inputFirstName" placeholder="First Name" type="text" [(ngModel)]="firstname" name="firstname" required>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputLastName">Last Name</label>
+          <input class="form-control" id="inputLastName" placeholder="Last Name" type="text" [(ngModel)]="lastname" name="lastname">
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label for="inputEmail">Email</label>
+          <input class="form-control" id="inputEmail" placeholder="Email" type="email" [(ngModel)]="email" name="email" required>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>Username</label>
+          <input class="form-control" id="inputUsername" placeholder="Enter Username" type="text" (change)="usernameChecker()" [(ngModel)]="username" name="username" required>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label>&nbsp;</label>
+          <div *ngIf="usernameStatus" class="text-warning"><strong>Username Taken.</strong>
+            <br> Please choose another Username</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label>Street</label>
+          <input class="form-control" id="inputStreet" placeholder="Enter Street" type="text" [(ngModel)]="street" name="street" required>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label>State</label>
+          <input class="form-control" id="inputState" placeholder="Enter State" type="text" [(ngModel)]="state" name="state" required>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label>City</label>
+          <input class="form-control" id="inputCity" placeholder="Enter City" type="text" [(ngModel)]="city" name="city" required>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="form-group">
+          <label>Country</label>
+          <input class="form-control" id="inputCountry" placeholder="Enter Country" type="text" [(ngModel)]="country" name="country" required>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputDOB">Date of Birth</label>
+          <input class="form-control" id="inputDob" placeholder="Date Of Birth" type="date" [(ngModel)]="dob" name="dob" required>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select class="form-control" id="gender" [(ngModel)]="gender" name="gender" required>
+            <option disabled selected>Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-12">
+        <div class="form-group">
+          <label for="inputWebsite">Website</label>
+          <input class="form-control" id="inputWebsite" placeholder="Website" type="text" [(ngModel)]="website" name="website">
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputPhone">Phone</label>
+          <input class="form-control" id="inputPhone" placeholder="Phone" type="text" [(ngModel)]="phone" name="phone" required>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="form-group">
+          <label for="inputProfession">Profession</label>
+          <select class="form-control" id="profession" [(ngModel)]="profession" name="profession" required>
+            <option disabled selected>Select Profession </option>
+            <option value="Student">Student</option>
+            <option value="Celebrity">Celebrity</option>
+            <option value="Professional">Professional</option>
+            <option value="Others">Others</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </div>
+</form>
